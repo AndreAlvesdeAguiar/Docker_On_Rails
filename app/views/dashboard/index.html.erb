@@ -1,0 +1,12 @@
+<h1>Dados dos Sensores em Tempo Real</h1>
+
+<turbo-frame id="sensor-data-frame">
+  <%= render partial: "sensor_data", locals: { sensor_data: @sensor_data } %>
+</turbo-frame>
+
+<script>
+  // Atualiza o Turbo Frame a cada 30 segundos
+  setInterval(() => {
+    Turbo.visit(location.href, { action: "replace", frame: "sensor-data-frame" });
+  }, 5000);
+</script>

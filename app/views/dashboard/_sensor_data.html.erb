@@ -1,0 +1,10 @@
+<div id="sensor-data">
+  <% sensor_data.each do |url, data| %>
+    <h3>Dados de <%= url %></h3>
+    <ul>
+      <% data.each do |key, value| %>
+        <li><strong><%= key %>:</strong> <%= value %></li>
+      <% end %>
+    </ul>
+  <% end %>
+</div>
