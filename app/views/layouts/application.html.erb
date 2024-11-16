@@ -2,16 +2,33 @@
 <html>
   <head>
     <title>Railsondocker</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- CSRF e CSP Meta Tags -->
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <!-- Estilos -->
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <link rel="stylesheet" href="https://unpkg.com/98.css">
+
+    <!-- Scripts -->
     <%= javascript_importmap_tags %>
-    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+
+    <!-- Estilo de fundo estilo Windows 98 -->
+    <style>
+      body {
+        background: #c0c0c0; /* Fundo cinza clássico */
+        font-family: "Tahoma", sans-serif; /* Fonte padrão do Windows 98 */
+        margin: 0;
+        padding: 16px;
+      }
+      
+    </style>
   </head>
 
   <body>
+    <!-- Conteúdo dinâmico do Rails -->
     <%= yield %>
   </body>
 </html>

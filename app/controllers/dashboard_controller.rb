@@ -12,8 +12,7 @@ class DashboardController < ApplicationController
 
   def fetch_sensor_data
     urls = [
-      'http://192.168.15.16/dados',
-      'http://192.168.15.20/dados'
+      'http://192.168.15.8/dados'
     ]
 
     data = {}

@@ -1,17 +1,39 @@
-<h1>Welcome - TESYE RUBY ON RAILS NO DOCKER E PORTAINER</h1>
+<h1>Welcome - TESTE RUBY ON RAILS NO DOCKER E PORTAINER</h1>
 
-<%= link_to "Articles", articles_path %>
-
+<%= link_to "Articles", articles_path, class: "button" %>
 
 <h2>Stimulus Check</h2>
 
-<div data-controller="hello">
-  <input data-hello-target="name" type="text">
+<div class="window" style="margin: 32px; width: 300px;">
+  <div class="title-bar">
+    <div class="title-bar-text">
+      Stimulus Example
+    </div>
+  </div>
+  <div class="window-body">
+    <div data-controller="hello">
+      <input data-hello-target="name" type="text" class="text-input" style="width: 100%;">
+      
+      <button data-action="click->hello#greet" class="button" style="margin-top: 8px;">
+        Greet
+      </button>
 
-  <button data-action="click->hello#greet">
-    Greet
-  </button>
-
-  <span data-hello-target="output">
-  </span>
+      <div style="margin-top: 16px;">
+        <span data-hello-target="output"></span>
+      </div>
+    </div>
+  </div>
 </div>
+
+<div class="window" style="margin: 32px; width: 250px;">
+  <div class="title-bar">
+    <div class="title-bar-text">
+      My First VB4 Program
+    </div>
+  </div>
+  <div class="window-body">
+    <p>Hello, world!</p>
+  </div>
+</div>
+
+
