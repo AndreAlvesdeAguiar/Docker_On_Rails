@@ -1,4 +1,8 @@
 <%= turbo_stream.replace "sensor-data-frame" do %>
     <%= render partial: "sensor_data", locals: { sensor_data: @sensor_data } %>
   <% end %>
+
+<%= turbo_stream.replace "weather-data-frame" do %>
+    <%= render partial: "weather_data", locals: { weather_data: @weather_data } %>
+  <% end %>
   

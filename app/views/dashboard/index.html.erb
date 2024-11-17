@@ -1,30 +1,31 @@
-<div class="window-body">
-  <p>Hello, world!</p>
-
-  <menu role="tablist">
-    <li role="tab" aria-selected="true"><a href="#tabs">Desktop</a></li>
-    <li role="tab"><a href="#tabs">My computer</a></li>
-    <li role="tab"><a href="#tabs">Control panel</a></li>
-    <li role="tab"><a href="#tabs">Devices manager</a></li>
-    <li role="tab"><a href="#tabs">Hardware profiles</a></li>
-    <li role="tab"><a href="#tabs">Performance</a></li>
-  </menu>
-  <div class="window" role="tabpanel">
-    <div class="window-body">
-      <p>the tab content</p>
-    </div>
-  </div>
-</div>
-
-<h3>Dados dos Sensores em Tempo Real</h3>
+<h2>Monitoramento ESP32 x OpenWeather</h2>
 
 <turbo-frame id="sensor-data-frame">
   <%= render partial: "sensor_data", locals: { sensor_data: @sensor_data } %>
 </turbo-frame>
 
+<turbo-frame id="weather-data-frame">
+  <%= render partial: "weather_data", locals: { weather_data: @weather_data } %>
+</turbo-frame>
+
+<div class="window" style="margin: 32px; width: 250px;">
+  <div class="title-bar">
+    <div class="title-bar-text">
+      Anotaçãoes
+    </div>
+  </div>
+  <div class="window-body">
+    <p>Hello, world!</p>
+  </div>
+  <button onclick="location.href='<%= articles_path %>'" class="button" style="margin-top: 8px;">
+    Articles
+  </button>
+</div>
+
 <script>
   // Atualiza o Turbo Frame a cada 30 segundos
   setInterval(() => {
     Turbo.visit(location.href, { action: "replace", frame: "sensor-data-frame" });
-  }, 5000);
+    Turbo.visit(location.href, { action: "replace", frame: "weather-data-frame" });
+  }, 3000);
 </script>

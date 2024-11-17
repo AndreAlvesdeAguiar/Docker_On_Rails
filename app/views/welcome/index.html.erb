@@ -1,8 +1,36 @@
-<h1>Welcome - TESTE RUBY ON RAILS NO DOCKER E PORTAINER</h1>
+<h3>Welcome - Docker On Rails</h3>
 
-<%= link_to "Articles", articles_path, class: "button" %>
+<div class="window" style="margin: 32px; width: 250px;">
+  <div class="title-bar">
+    <div class="title-bar-text">
+      Navegação
+    </div>
+  </div>
+  <div class="window-body">
+    <p>Bem-vindo ao seu painel de navegação!</p>
+  </div>
+  <!-- Botão para Dashboard -->
+  <button onclick="location.href='<%= dashboard_index_path %>'" class="button" style="margin-top: 8px;">
+    Dashboard
+  </button>
 
-<h2>Stimulus Check</h2>
+  <!-- Botão para Artigos -->
+  <button onclick="location.href='<%= articles_path %>'" class="button" style="margin-top: 8px;">
+    Articles
+  </button>
+
+  <!-- Botão para a página de dados -->
+  <button onclick="location.href='<%= dados_path %>'" class="button" style="margin-top: 8px;">
+    Dados
+  </button>
+
+  <!-- Botão para a página de saúde do Rails -->
+  <button onclick="location.href='<%= rails_health_check_path %>'" class="button" style="margin-top: 8px;">
+    Saúde do Servidor
+  </button>
+</div>
+
+<h3>Stimulus Check</h3>
 
 <div class="window" style="margin: 32px; width: 300px;">
   <div class="title-bar">
@@ -35,5 +63,6 @@
     <p>Hello, world!</p>
   </div>
 </div>
+
 
 

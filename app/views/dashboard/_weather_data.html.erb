@@ -1,0 +1,20 @@
+<h3>Dados OpenWeather.:.Api : https://api.openweathermap.org/data/2.5/weather?q=S%C3%A3o%20Paulo&appid=OPENWEATHER_API_KEY&units=metric</h3>
+
+<table style="width: 100%; border-collapse: collapse; text-align: left; margin-top: 16px;">
+  <thead>
+    <tr>
+      <th style="border-bottom: 1px solid; padding: 8px;">Parâmetro</th>
+      <th style="border-bottom: 1px solid; padding: 8px;">Valor</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @weather_data.each do |key, value| %>
+      <tr>
+        <td style="padding: 8px; border-bottom: 1px solid;"><strong><%= key %>:</strong></td>
+        <td style="padding: 8px; border-bottom: 1px solid;">
+          <span class="weather-value"><%= value %></span>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
