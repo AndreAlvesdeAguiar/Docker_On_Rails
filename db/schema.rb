@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_03_26_154219) do
+ActiveRecord::Schema[7.2].define(version: 2024_11_18_173955) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -65,6 +65,15 @@ ActiveRecord::Schema[7.1].define(version: 2023_03_26_154219) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["article_id"], name: "index_comments_on_article_id"
+  end
+
+  create_table "environment_data", force: :cascade do |t|
+    t.float "esp_temperature"
+    t.float "esp_humidity"
+    t.float "weather_temperature"
+    t.float "weather_humidity"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"

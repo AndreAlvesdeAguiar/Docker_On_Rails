@@ -1,0 +1,5 @@
+:queues:
+  - default
+:concurrency: 5
+:redis:
+  url: redis://docker_on_rails-redis-1:6379/0

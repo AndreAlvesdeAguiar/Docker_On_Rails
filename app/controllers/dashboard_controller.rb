@@ -1,5 +1,9 @@
 class DashboardController < ApplicationController
   def index
+    FetchWeatherAndSensorDataJob.perform_later(['http://192.168.15.8/dados'])
+
+    @data = EnvironmentData.order(created_at: :desc).limit(10)
+
     @sensor_data = fetch_sensor_data
     @weather_data = fetch_weather_data('Sao Paulo')
 
